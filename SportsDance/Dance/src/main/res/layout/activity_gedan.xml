@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_410">
+
+        <ImageView
+            android:id="@+id/gd_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+
+        <ImageView
+            android:id="@+id/img_head"
+            android:layout_width="@dimen/spacing_244"
+            android:layout_height="@dimen/spacing_244"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/spacing_30"
+            android:layout_marginLeft="@dimen/spacing_30"/>
+
+        <TextView
+            android:id="@+id/text_title"
+            style="@style/play_muisc"
+            android:layout_alignTop="@+id/img_head"
+            android:layout_marginStart="@dimen/spacing_30"
+            android:layout_toEndOf="@+id/img_head"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize30"
+            />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            style="@style/play_muisc"
+            android:layout_alignBottom="@+id/img_head"
+            android:layout_marginBottom="@dimen/spacing_20"
+            android:layout_marginStart="@dimen/spacing_30"
+            android:layout_toEndOf="@+id/img_head"
+            android:src="@drawable/ej"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/text_count"
+            style="@style/play_muisc"
+            android:layout_alignBottom="@+id/imageView4"
+            android:layout_marginStart="@dimen/spacing_10"
+            android:layout_toEndOf="@+id/imageView4"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize24"/>
+    </RelativeLayout>
+
+    <include layout="@layout/list_layout"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/gd_black"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_100"
+        android:background="@color/light_black">
+
+        <LinearLayout
+            android:id="@+id/gd_tiao"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/gd_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/spacing_76"
+                android:layout_marginBottom="@dimen/spacing_12"
+                android:layout_marginLeft="@dimen/spacing_20"
+                android:layout_marginTop="@dimen/spacing_12"
+                android:src="@drawable/icon_mydefault"/>
+
+            <TextView
+                android:id="@+id/gd_txt"
+                style="@style/play_muisc"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/spacing_10"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+        <RelativeLayout
+            style="@style/play_muisc"
+            android:layout_marginBottom="@dimen/spacing_22"
+            android:layout_marginRight="@dimen/spacing_30"
+            android:layout_marginTop="@dimen/spacing_22"
+            >
+            <ImageView
+                android:clickable="true"
+                android:id="@+id/gd_bo"
+                style="@style/play_muisc"
+                android:background="@drawable/play_pause" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
